@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Intranet Comercial de CDI — la sede digital del equipo comercial." />
+  <meta name="theme-color" content="#0c0908" />
+  <title>CDI · Intranet Comercial</title>
+
+  <!-- Tipografía Inter (con fallback de sistema si no hay conexión) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Capa ambiental de fondo -->
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb--a"></span>
+    <span class="orb orb--b"></span>
+    <span class="orb orb--c"></span>
+    <span class="grid-lines"></span>
+  </div>
+
+  <!-- ===================== TOPBAR ===================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="CDI · Intranet Comercial">
+        <span class="brand__mark">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true">
+            <path d="M23 9.2A9 9 0 1 0 23 22.8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>CDI</strong>
+          <em>Intranet Comercial</em>
+        </span>
+      </a>
+
+      <button class="cmd" id="cmdOpen" type="button" aria-label="Buscar en la intranet">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Buscar herramienta…</span>
+        <kbd>⌘K</kbd>
+      </button>
+
+      <div class="topbar__right">
+        <span class="clock" id="clock" aria-hidden="true">—</span>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema">
+          <svg class="ic-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></g></svg>
+          <svg class="ic-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="currentColor"/></svg>
+        </button>
+        <div class="avatar" id="avatar" title="Colaborador CDI">CD</div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===================== HERO / LOBBY ===================== -->
+    <section class="hero reveal">
+      <p class="hero__eyebrow">
+        <span class="pulse"></span> Sede digital · Equipo Comercial
+      </p>
+      <h1 class="hero__title" id="greeting">Bienvenido a CDI</h1>
+      <p class="hero__sub">
+        Tu centro de operaciones comercial. Todo lo que necesitas para vender,
+        capacitarte y crecer — reunido en un solo lugar.
+      </p>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="3">3</span>
+          <span class="stat__label">Departamentos</span>
+        </div>
+        <span class="stat__div"></span>
+        <div class="stat">
+          <span class="stat__num" data-count="7">7</span>
+          <span class="stat__label">Herramientas activas</span>
+        </div>
+        <span class="stat__div"></span>
+        <div class="stat">
+          <span class="stat__num">∞</span>
+          <span class="stat__label">Por construir</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEPARTAMENTOS ===================== -->
+    <section class="departments" aria-label="Departamentos">
+
+      <!-- ========== 1 · GESTIÓN COMERCIAL ========== -->
+      <article class="dept dept--comercial reveal" data-accent="comercial" id="dep-comercial">
+        <div class="dept__glow" aria-hidden="true"></div>
+        <header class="dept__head">
+          <div class="dept__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 8.5h16M8 8.5V6.2A2.2 2.2 0 0 1 10.2 4h3.6A2.2 2.2 0 0 1 16 6.2v2.3M5 8.5h14a1 1 0 0 1 1 1V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9.5a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="dept__titles">
+            <span class="dept__kicker">Departamento 01</span>
+            <h2 class="dept__name">Gestión Comercial</h2>
+            <p class="dept__desc">Todo lo necesario para vender.</p>
+          </div>
+          <span class="dept__count">4 herramientas</span>
+        </header>
+
+        <div class="tools tools--feature">
+          <a class="tool tool--primary" href="https://consultoriaimportacion-crypto.github.io/Presentacion/" target="_blank" rel="noopener" data-name="presentación comercial">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 5h16v11H4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 20h6M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M8 12l2.6-2.6 2 2L16 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Presentación Comercial</strong>
+              <span class="tool__desc">El pitch oficial para presentar CDI a tus prospectos.</span>
+            </span>
+            <span class="tool__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="tool" href="https://consultoriaimportacion-crypto.github.io/GHL---CDI/?v=5" target="_blank" rel="noopener" data-name="dashboard comercial">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 19V5M20 19H4M8 19v-6M12 19V9M16 19v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Dashboard Comercial</strong>
+              <span class="tool__desc">Métricas y seguimiento en vivo del pipeline.</span>
+            </span>
+            <span class="tool__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="tool" href="https://docs.google.com/spreadsheets/d/1kMfKLme-_Das-9U4PykLBGJx4qd30mCKC8CDzdlKsw0/edit?gid=0#gid=0" target="_blank" rel="noopener" data-name="links de pago">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 8h18v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 11h18" stroke="currentColor" stroke-width="1.8"/><path d="M7 6l5-2 5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Links de Pago</strong>
+              <span class="tool__desc">Genera y comparte enlaces de cobro seguros.</span>
+            </span>
+            <span class="tool__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <button class="tool tool--group" type="button" data-name="accesos circle samu gohighlevel" aria-expanded="false" aria-controls="accesos-panel">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 7a3 3 0 1 0-6 0 3 3 0 0 0 6 0Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Accesos <span class="tool__hint">4 plataformas</span></strong>
+              <span class="tool__desc">Circle · Samu · GoHighLevel · Importools.</span>
+            </span>
+            <span class="tool__chev" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path d="m7 10 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="accesos" id="accesos-panel" hidden>
+          <a class="access" href="https://curso.circulodeimportadores.com/c/avisos-y-comunidad?post_login_redirect=https%3A%2F%2Fcurso.circulodeimportadores.com%2F">
+            <span class="access__dot"></span>
+            <span class="access__name">Circle</span>
+            <span class="access__meta">Comunidad</span>
+          </a>
+          <a class="access" href="https://dashboard.samu.ai/login">
+            <span class="access__dot"></span>
+            <span class="access__name">Samu</span>
+            <span class="access__meta">IA</span>
+          </a>
+          <a class="access" href="https://app.gohighlevel.com/">
+            <span class="access__dot"></span>
+            <span class="access__name">GoHighLevel</span>
+            <span class="access__meta">CRM</span>
+          </a>
+          <a class="access" href="https://importools.com.co/dashboard/importaciones/">
+            <span class="access__dot"></span>
+            <span class="access__name">Importools</span>
+            <span class="access__meta">Importaciones</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- ========== 2 · ENTRENAMIENTO ========== -->
+      <article class="dept dept--entrenamiento reveal" data-accent="entrenamiento" id="dep-entrenamiento">
+        <div class="dept__glow" aria-hidden="true"></div>
+        <header class="dept__head">
+          <div class="dept__badge">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4 2.5 8.5 12 13l9.5-4.5L12 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 10.5V15c0 1.4 2.7 2.8 6 2.8s6-1.4 6-2.8v-4.5M21.5 8.5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="dept__titles">
+            <span class="dept__kicker">Departamento 02</span>
+            <h2 class="dept__name">Entrenamiento</h2>
+            <p class="dept__desc">Todo lo necesario para capacitar al equipo.</p>
+          </div>
+          <span class="dept__count">2 activas · 3 en camino</span>
+        </header>
+
+        <div class="tools tools--grid">
+          <a class="tool" href="https://consultoriaimportacion-crypto.github.io/objeciones/" target="_blank" rel="noopener" data-name="biblioteca de objeciones">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4h11l3 3v13H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 9h7M8.5 12.5h7M8.5 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Biblioteca de Objeciones</strong>
+              <span class="tool__desc">Respuestas listas para cada bloqueo del cliente.</span>
+            </span>
+            <span class="tool__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="tool" href="https://consultoriaimportacion-crypto.github.io/ARSENAL-DE-TESTIMONIOS/Arsenal_de_Casos.html" target="_blank" rel="noopener" data-name="arsenal de testimonios">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3.5l2.5 5 5.5.8-4 3.9.95 5.5L12 16.9 7.1 18.7 8 13.2 4 9.3l5.5-.8L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Arsenal de Testimonios</strong>
+              <span class="tool__desc">Casos y pruebas sociales para cerrar con confianza.</span>
+            </span>
+            <span class="tool__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <span class="tool tool--soon" data-name="arsenal de ventas" aria-disabled="true" tabindex="0">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 3 4 14h6l-1 7 9-11h-6l1-7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Arsenal de Ventas</strong>
+              <span class="tool__desc">Guiones, frases y técnicas de cierre.</span>
+            </span>
+            <span class="badge badge--soon">Próximamente</span>
+          </span>
+
+          <span class="tool tool--soon" data-name="flujograma setter" aria-disabled="true" tabindex="0">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="4" y="4" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="10" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="16" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 6h4a1 1 0 0 1 1 1v3M10 18h4a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Flujograma Setter</strong>
+              <span class="tool__desc">El proceso paso a paso del setter.</span>
+            </span>
+            <span class="badge badge--soon">Próximamente</span>
+          </span>
+
+          <span class="tool tool--soon" data-name="flujograma closer" aria-disabled="true" tabindex="0">
+            <span class="tool__ic">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="4" y="4" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="10" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="16" width="6" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 6h4a1 1 0 0 1 1 1v3M10 18h4a1 1 0 0 0 1-1v-3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <span class="tool__body">
+              <strong class="tool__name">Flujograma Closer</strong>
+              <span class="tool__desc">El proceso paso a paso del closer.</span>
+            </span>
+            <span class="badge badge--soon">Próximamente</span>
+          </span>
+        </div>
+
+        <footer class="roadmap">
+          <span class="roadmap__label">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            En construcción
+          </span>
+          <ul class="roadmap__chips">
+            <li>Evaluador de llamadas con IA</li>
+            <li>Roleplay con IA</li>
+            <li>Certificaciones</li>
+            <li>Biblioteca de conocimiento</li>
+            <li>Simulaciones</li>
+            <li>Entrenamientos interactivos</li>
+          </ul>
+        </footer>
+      </article>
+
+      <!-- ========== 3 · RECURSOS HUMANOS ========== -->
+      <article class="dept dept--rrhh reveal" data-accent="rrhh" id="dep-rrhh">
+        <div class="dept__glow" aria-hidden="true"></div>
+        <div class="rrhh">
+          <div class="rrhh__left">
+            <div class="dept__badge">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 8a3 3 0 1 0-.001-.001M16.5 9a2.4 2.4 0 1 0 0-.001" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 19a5.5 5.5 0 0 1 11 0M14.5 19a4.5 4.5 0 0 1 6.5-4.02" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <span class="dept__kicker">Departamento 03</span>
+              <h2 class="dept__name">Recursos Humanos</h2>
+              <p class="dept__desc">El hogar del colaborador: onboarding, políticas, solicitudes y más.</p>
+            </div>
+          </div>
+          <div class="rrhh__right">
+            <a class="tool rrhh__cta" href="https://script.google.com/macros/s/AKfycbwYhcwB9-ssNK3XIppE-UbyPW4-LU3EAcSBA6LuRrw-Fv2vvN2JLWUM8jHxZQyGgWH2Pg/exec" target="_blank" rel="noopener" data-name="ingresar a recursos humanos">
+              Ingresar a Recursos Humanos
+              <span class="tool__arrow" aria-hidden="true" style="position:static">↗</span>
+            </a>
+            <ul class="rrhh__future">
+              <li>Onboarding</li><li>Políticas</li><li>Solicitudes</li>
+              <li>Manual</li><li>Vacaciones</li><li>Formatos</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer class="site-foot">
+      <span>© <span id="year">2026</span> CDI · Consultoría de Importación</span>
+      <span class="site-foot__mid">Plataforma interna del equipo comercial</span>
+      <span class="site-foot__ver">v1.0 · Intranet</span>
+    </footer>
+  </main>
+
+  <!-- ===================== COMMAND PALETTE ===================== -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette__backdrop" data-close></div>
+    <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Buscar herramienta">
+      <div class="palette__input">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="text" id="paletteInput" placeholder="Buscar herramienta, departamento o recurso…" autocomplete="off" />
+        <kbd data-close>Esc</kbd>
+      </div>
+      <ul class="palette__list" id="paletteList"></ul>
+      <div class="palette__empty" id="paletteEmpty" hidden>Sin resultados.</div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
